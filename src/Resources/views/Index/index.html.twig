@@ -10,10 +10,106 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <h1>Potogan Application Test</h1>
-            <p>
-                C'est ici que vous devez créer le formulaire comme stipulé dans l'énoncé à la racine du projet (ENONCE.md)<br>
-                Vous êtes libre d'utiliser les outils que vous souhaitez. Bootstrap y est déjà présent
-            </p>
+            <h2>Inscription à une conférence</h2>
+
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col-md-3">
+                    {{ form_label(form.username) }}
+                </div>
+                <div class="col-md-9">
+                    {{ form_widget(form.username) }}
+                    <div class="input-group has-error">
+                        {{ form_errors(form.username) }}
+                    </div>
+                </div>
+            </div>
+            <div>&nbsp;</div>
+            <div class="row">
+                <div class="col-md-3">
+                    {{ form_label(form.firstname) }}
+                </div>
+                <div class="col-md-9">
+                    {{ form_widget(form.firstname) }}
+                    <div class="input-group has-error">
+                        {{ form_errors(form.firstname) }}
+                    </div>
+                </div>
+            </div>
+            <div>&nbsp;</div>
+            <div class="row">
+                <div class="col-md-3">
+                    {{ form_label(form.lastname) }}
+                </div>
+                <div class="col-md-9">
+                    {{ form_widget(form.lastname) }}
+                    <div class="input-group has-error">
+                        {{ form_errors(form.lastname) }}
+                    </div>
+                </div>
+            </div>
+            <div>&nbsp;</div>
+            <div class="row">
+                <div class="col-md-3">
+                    {{ form_label(form.mobile) }}
+                </div>
+                <div class="col-md-9">
+                    {{ form_widget(form.mobile) }}
+                    <div class="input-group has-error">
+                        {{ form_errors(form.mobile) }}
+                    </div>
+                </div>
+            </div>
+            <div>&nbsp;</div>
+            <div class="row">
+                <div class="col-md-3">
+                    {{ form_label(form.email) }}
+                </div>
+                <div class="col-md-9">
+                    {{ form_widget(form.email) }}
+                    <div class="input-group has-error">
+                        {{ form_errors(form.email) }}
+                    </div>
+                </div>
+            </div>
+            <div>&nbsp;</div>
+            <div class="row">
+                <div class="col-md-3">
+                    {{ form_label(form.twitter) }}
+                </div>
+                <div class="col-md-9">
+                    {{ form_widget(form.twitter) }}
+                    <div class="input-group has-error">
+                        {{ form_errors(form.twitter) }}
+                    </div>
+                </div>
+            </div>
+            <div>&nbsp;</div>
+            <div class="row">
+                <div class="col-md-3">
+                    {{ form_label(form.facebook) }}
+                </div>
+                <div class="col-md-9">
+                    {{ form_widget(form.facebook) }}
+                    <div class="input-group has-error">
+                        {{ form_errors(form.facebook) }}
+                    </div>
+                </div>
+            </div>
+            <div>&nbsp;</div>
+            <div class="row">
+                <div class="col-md-3">
+                    {{ form_label(form.avatar) }}
+                </div>
+                <div class="col-md-9">
+                    {{ form_widget(form.avatar) }}
+                    <div class="input-group has-error">
+                        {{ form_errors(form.avatar) }}
+                    </div>
+                </div>
+            </div>
+            <div>&nbsp;</div>
+            {{ form_end(form) }}
         </div>
     </div>
 </div>
