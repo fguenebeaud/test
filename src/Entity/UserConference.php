@@ -61,6 +61,7 @@ class UserConference
      * @var string
      *
      * @Assert\Length(min = 8, max = 20)
+     * @Assert\NotBlank()
      * @MisdAssert\PhoneNumber()
      * @ORM\Column(name="mobile", type="string", length=255)
      */
