@@ -5,7 +5,7 @@ Ceci est l'énoncé du test d'application au poste de Développeur(se) Web Potog
 
 Vous devrez, dans le temps imparti, créer un formulaire d'inscription à une conférence.
 Le formulaire doit comporter les éléments suivants
-  - Nom
+  - Noms
   - Prénom
   - Email
   - Mobile
