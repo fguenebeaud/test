@@ -86,6 +86,7 @@ class UserConference
      * @var string
      *
      * @ORM\Column(name="twitter", type="string", length=255, nullable=true)
+     * @Assert\Regex("/^@/")
      */
     protected $twitter;
 
@@ -95,6 +96,10 @@ class UserConference
      * @var string
      *
      * @ORM\Column(name="facebook", type="string", length=255, nullable=true)
+     *
+     * @Assert\Url(
+     *    protocols = {"http"}
+     * )
      */
     protected $facebook;
 
