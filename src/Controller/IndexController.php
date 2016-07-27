@@ -33,25 +33,18 @@ class IndexController extends Controller
         $form = $this->createCreateForm($userConference);
         $form->handleRequest($request);
 
+        // Validate form
         if ($form->isSubmitted() && $form->isValid()) {
+            // manage file if exist
             if ($userConference->getAvatar()) {
-                // $file stores the uploaded PDF file
                 $file = $userConference->getAvatar();
-
-                // Generate a unique name for the file before saving it
                 $fileName = md5(uniqid()).'.'.$file->guessExtension();
-
-                // Move the file to the directory where brochures are stored
                 $file->move(
                     $this->getParameter('avatar_directory'),
                     $fileName
                 );
-
-                // Update the 'brochure' property to store the PDF file name
-                // instead of its contents
                 $userConference->setAvatar($fileName);
             }
-
 
             $em->persist($userConference);
             $em->flush($userConference);
@@ -65,7 +58,7 @@ class IndexController extends Controller
     }
 
     /**
-     * Index page
+     * List of all users registered
      *
      * @Route("/list")
      * @Method({"GET"})
@@ -82,7 +75,7 @@ class IndexController extends Controller
     }
 
     /**
-     * Creates a form to create a Site entity.
+     * Creates a form to create a User
      *
      * @param UserConference $entity
      *
